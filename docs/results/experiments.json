@@ -2,7 +2,7 @@
   "meta": {
     "seed": 20261004,
     "quick": false,
-    "total_seconds": 5.309877899999265
+    "total_seconds": 5.835676299997431
   },
   "bit_error": {
     "figure": "docs/figures/fig1_bit_error.png",
@@ -323,7 +323,7 @@
     ]
   },
   "platform": {
-    "figure": "docs/figures/fig6_platform.png",
+    "figure": "docs/figures/fig5_platform.png",
     "rows": [
       {
         "text": "hey",

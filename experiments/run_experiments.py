@@ -362,10 +362,10 @@ def exp_platform() -> dict:
         for s in ("top", "right", "left"):
             ax.spines[s].set_visible(False)
     axes[-1].set_xlabel("позиція біта у вхідному рядку")
-    fig.suptitle("Рис. 6. Спотворені біти в прикладах платформи: щонайбільше один на трійку",
+    fig.suptitle("Рис. 5. Спотворені біти в прикладах платформи: щонайбільше один на трійку",
                  fontsize=12, fontweight="semibold", color=INK)
     fig.tight_layout()
-    path = save(fig, "fig6_platform.png")
+    path = save(fig, "fig5_platform.png")
     return {"figure": path, "rows": rows}
 
 
