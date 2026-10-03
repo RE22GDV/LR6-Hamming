@@ -1,15 +1,3 @@
-"""
-Codewars - "Error correction #1 - Hamming Code" (6 kyu)
-https://www.codewars.com/kata/5ef9ca8b76be6d001d5e1c3e
-
-Python version of the same solution as CodeWars.cs, kept for comparison.
-
-Every bit of the 8-bit ASCII code is sent three times; the receiver takes a
-majority vote in each triple, so any single flip inside a triple is
-corrected. This is exactly the Hamming code with r = 2: n = 3, k = 1.
-"""
-
-
 def encode(string):
     # format(code, "08b") pads with leading zeros to exactly 8 digits:
     # ord("h") = 104 -> "01101000" (bin(104) would give "0b1101000").
