@@ -1,0 +1,358 @@
+{
+  "meta": {
+    "seed": 20261004,
+    "quick": false,
+    "total_seconds": 5.309877899999265
+  },
+  "bit_error": {
+    "figure": "docs/figures/fig1_bit_error.png",
+    "sim_bits": 200000,
+    "sim_p": [
+      0.02,
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.4
+    ],
+    "sim": {
+      "rep": [
+        0.00113,
+        0.00707,
+        0.027745,
+        0.102885,
+        0.215835,
+        0.35147
+      ],
+      "h74": [
+        0.00332,
+        0.01961,
+        0.066495,
+        0.19554,
+        0.32142,
+        0.42379
+      ]
+    },
+    "theory_at_sim_p": {
+      "rep": [
+        0.0011840000000000002,
+        0.007250000000000001,
+        0.028000000000000004,
+        0.10400000000000002,
+        0.21600000000000003,
+        0.3520000000000001
+      ],
+      "h74": [
+        0.003396761600000009,
+        0.019433749999999885,
+        0.06688000000000072,
+        0.19615999999999992,
+        0.32183999999999957,
+        0.42111999999999516
+      ]
+    },
+    "h74_crossover_p": 0.2113248654051887,
+    "h74_crossover_closed_form": 0.21132486540518713,
+    "table_p": [
+      0.001,
+      0.01,
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.5
+    ],
+    "table": [
+      {
+        "p": 0.001,
+        "uncoded": 0.001,
+        "rep": 2.998e-06,
+        "h74": 8.974029987999986e-06
+      },
+      {
+        "p": 0.01,
+        "uncoded": 0.01,
+        "rep": 0.00029800000000000003,
+        "h74": 0.0008742987999999865
+      },
+      {
+        "p": 0.05,
+        "uncoded": 0.05,
+        "rep": 0.007250000000000001,
+        "h74": 0.019433749999999885
+      },
+      {
+        "p": 0.1,
+        "uncoded": 0.1,
+        "rep": 0.028000000000000004,
+        "h74": 0.06688000000000072
+      },
+      {
+        "p": 0.2,
+        "uncoded": 0.2,
+        "rep": 0.10400000000000002,
+        "h74": 0.19615999999999992
+      },
+      {
+        "p": 0.3,
+        "uncoded": 0.3,
+        "rep": 0.21600000000000003,
+        "h74": 0.32183999999999957
+      },
+      {
+        "p": 0.5,
+        "uncoded": 0.5,
+        "rep": 0.5,
+        "h74": 0.5
+      }
+    ]
+  },
+  "char_error": {
+    "figure": "docs/figures/fig2_char_error.png",
+    "rows": [
+      {
+        "p": 0.01,
+        "uncoded": 0.07725530557207994,
+        "rep": 0.002381514969409415,
+        "h74": 0.004057958139757067
+      },
+      {
+        "p": 0.05,
+        "uncoded": 0.33657956871093775,
+        "rep": 0.05654939809549708,
+        "h74": 0.08679145185014348
+      },
+      {
+        "p": 0.1,
+        "uncoded": 0.5695327899999999,
+        "rep": 0.20323523647524533,
+        "h74": 0.27698038660864355
+      }
+    ]
+  },
+  "family": {
+    "figure": "docs/figures/fig3_family.png",
+    "p": 0.01,
+    "rows": [
+      {
+        "r": 2,
+        "n": 3,
+        "k": 1,
+        "rate": 0.3333333333333333,
+        "overhead": 3.0,
+        "corrects": 1,
+        "block_fail": 0.00029799999999997884,
+        "p": 0.01
+      },
+      {
+        "r": 3,
+        "n": 7,
+        "k": 4,
+        "rate": 0.5714285714285714,
+        "overhead": 1.75,
+        "corrects": 1,
+        "block_fail": 0.002031041634940084,
+        "p": 0.01
+      },
+      {
+        "r": 4,
+        "n": 15,
+        "k": 11,
+        "rate": 0.7333333333333333,
+        "overhead": 1.3636363636363635,
+        "corrects": 1,
+        "block_fail": 0.009629773443364825,
+        "p": 0.01
+      },
+      {
+        "r": 5,
+        "n": 31,
+        "k": 26,
+        "rate": 0.8387096774193549,
+        "overhead": 1.1923076923076923,
+        "corrects": 1,
+        "block_fail": 0.03838951459523568,
+        "p": 0.01
+      },
+      {
+        "r": 6,
+        "n": 63,
+        "k": 57,
+        "rate": 0.9047619047619048,
+        "overhead": 1.105263157894737,
+        "corrects": 1,
+        "block_fail": 0.1312454751643603,
+        "p": 0.01
+      },
+      {
+        "r": 7,
+        "n": 127,
+        "k": 120,
+        "rate": 0.9448818897637795,
+        "overhead": 1.0583333333333333,
+        "corrects": 1,
+        "block_fail": 0.3629948280785525,
+        "p": 0.01
+      }
+    ]
+  },
+  "burst": {
+    "figure": "docs/figures/fig4_burst.png",
+    "text": "Error correction!",
+    "bits": 408,
+    "depth": 136,
+    "lengths": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "plain_percent": [
+      100.0,
+      33.16953316953317,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "interleaved_percent": [
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ]
+  },
+  "forgery": {
+    "rows": [
+      {
+        "original": "hey",
+        "forged": "hex",
+        "flips": 2,
+        "bits": 72,
+        "percent": 2.7777777777777777
+      },
+      {
+        "original": "pay 100",
+        "forged": "pay 900",
+        "flips": 2,
+        "bits": 168,
+        "percent": 1.1904761904761905
+      },
+      {
+        "original": "YES",
+        "forged": "NO!",
+        "flips": 20,
+        "bits": 72,
+        "percent": 27.77777777777778
+      },
+      {
+        "original": "attack at 9",
+        "forged": "attack at 1",
+        "flips": 2,
+        "bits": 264,
+        "percent": 0.7575757575757576
+      }
+    ],
+    "triple_outcomes": [
+      {
+        "pattern": "000",
+        "flips": 0,
+        "received": "111",
+        "decoded": "1",
+        "correct": true
+      },
+      {
+        "pattern": "001",
+        "flips": 1,
+        "received": "110",
+        "decoded": "1",
+        "correct": true
+      },
+      {
+        "pattern": "010",
+        "flips": 1,
+        "received": "101",
+        "decoded": "1",
+        "correct": true
+      },
+      {
+        "pattern": "011",
+        "flips": 2,
+        "received": "100",
+        "decoded": "0",
+        "correct": false
+      },
+      {
+        "pattern": "100",
+        "flips": 1,
+        "received": "011",
+        "decoded": "1",
+        "correct": true
+      },
+      {
+        "pattern": "101",
+        "flips": 2,
+        "received": "010",
+        "decoded": "0",
+        "correct": false
+      },
+      {
+        "pattern": "110",
+        "flips": 2,
+        "received": "001",
+        "decoded": "0",
+        "correct": false
+      },
+      {
+        "pattern": "111",
+        "flips": 3,
+        "received": "000",
+        "decoded": "0",
+        "correct": false
+      }
+    ]
+  },
+  "platform": {
+    "figure": "docs/figures/fig6_platform.png",
+    "rows": [
+      {
+        "text": "hey",
+        "bits": 72,
+        "flipped": 7,
+        "percent": 9.722222222222221,
+        "max_per_triple": 1
+      },
+      {
+        "text": "The Sensei told me that i can do this kata",
+        "bits": 1008,
+        "flipped": 12,
+        "percent": 1.1904761904761905,
+        "max_per_triple": 1
+      },
+      {
+        "text": "T3st",
+        "bits": 96,
+        "flipped": 2,
+        "percent": 2.0833333333333335,
+        "max_per_triple": 1
+      },
+      {
+        "text": "T?st!%",
+        "bits": 144,
+        "flipped": 3,
+        "percent": 2.0833333333333335,
+        "max_per_triple": 1
+      }
+    ]
+  }
+}
