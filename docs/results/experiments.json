@@ -2,7 +2,7 @@
   "meta": {
     "seed": 20261004,
     "quick": false,
-    "total_seconds": 5.835676299997431
+    "total_seconds": 5.24325559999852
   },
   "bit_error": {
     "figure": "docs/figures/fig1_bit_error.png",
@@ -330,28 +330,49 @@
         "bits": 72,
         "flipped": 7,
         "percent": 9.722222222222221,
-        "max_per_triple": 1
+        "kata_language": "both"
       },
       {
         "text": "The Sensei told me that i can do this kata",
         "bits": 1008,
         "flipped": 12,
         "percent": 1.1904761904761905,
-        "max_per_triple": 1
+        "kata_language": "csharp"
       },
       {
         "text": "T3st",
         "bits": 96,
         "flipped": 2,
         "percent": 2.0833333333333335,
-        "max_per_triple": 1
+        "kata_language": "csharp"
       },
       {
         "text": "T?st!%",
         "bits": 144,
         "flipped": 3,
         "percent": 2.0833333333333335,
-        "max_per_triple": 1
+        "kata_language": "csharp"
+      },
+      {
+        "text": "The Sensei told me that i can do this kata",
+        "bits": 1008,
+        "flipped": 12,
+        "percent": 1.1904761904761905,
+        "kata_language": "python"
+      },
+      {
+        "text": "T3st",
+        "bits": 96,
+        "flipped": 2,
+        "percent": 2.0833333333333335,
+        "kata_language": "python"
+      },
+      {
+        "text": "T?st!%",
+        "bits": 144,
+        "flipped": 2,
+        "percent": 1.3888888888888888,
+        "kata_language": "python"
       }
     ]
   }

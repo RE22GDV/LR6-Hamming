@@ -160,3 +160,33 @@ def test_repetition_is_hamming_3_1() -> None:
     r = 2
     assert (2 ** r - 1, 2 ** r - 1 - r) == (3, 1)
     assert encode("\x00")[:3] == "000" and encode("\x7f")[3:6] == "111"
+
+
+# --------------------------------------------------------------------------- #
+#  Python-розв'язок для Codewars (той самий алгоритм, що й CodeWars.cs)
+# --------------------------------------------------------------------------- #
+
+def _load_python_solution():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "codewars_solution", ROOT / "solution" / "codewars_solution.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+@pytest.mark.parametrize("case", CASES, ids=IDS)
+def test_python_codewars_solution(case: dict) -> None:
+    """Python-файл для Codewars проходить приклади обох версій kata."""
+    sol = _load_python_solution()
+    fn = sol.encode if case["function"] == "Encode" else sol.decode
+    assert fn(case["input"]) == case["expected"]
+
+
+def test_python_solution_agrees_with_library_on_random_corruptions() -> None:
+    sol = _load_python_solution()
+    for _ in range(200):
+        text = _ascii(RNG.randrange(1, 20))
+        bits = flip(encode(text), [t + RNG.randrange(3) for t in range(0, 24 * len(text), 3)])
+        assert sol.encode(text) == encode(text)
+        assert sol.decode(bits) == decode(bits) == text

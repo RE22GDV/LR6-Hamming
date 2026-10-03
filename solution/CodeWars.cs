@@ -1,11 +1,3 @@
-// Codewars - "Error correction #1 - Hamming Code" (6 kyu)
-// https://www.codewars.com/kata/5ef9ca8b76be6d001d5e1c3e
-//
-// Every bit of the 8-bit ASCII code is sent three times. The receiver takes
-// a majority vote in each triple, so any single flip inside a triple is
-// corrected. This is exactly the Hamming code with r = 2 parity bits:
-// n = 2^r - 1 = 3, k = n - r = 1, minimum distance 3, corrects 1 error.
-
 using System;
 using System.Text;
 

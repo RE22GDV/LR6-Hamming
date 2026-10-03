@@ -337,17 +337,17 @@ def exp_forgery() -> dict:
 
 def exp_platform() -> dict:
     print("[6] Спотворення в прикладах платформи")
+    variant = {"both": "C#, Python", "csharp": "C#", "python": "Python"}
+    decode_cases = [c for c in CASES if c["function"] == "Decode"]
     rows = []
-    for c in CASES:
-        if c["function"] != "Decode":
-            continue
+    for c in decode_cases:
         rows.append({"text": c["expected"], "bits": len(c["input"]),
                      "flipped": c["flipped_count"],
                      "percent": 100.0 * c["flipped_count"] / len(c["input"]),
-                     "max_per_triple": 1 if c["flipped_count"] else 0})
+                     "kata_language": c.get("kata_language", "csharp")})
 
-    fig, axes = plt.subplots(len(rows), 1, figsize=(9.6, 3.6), sharex=False)
-    for ax, c, r in zip(axes, [c for c in CASES if c["function"] == "Decode"], rows):
+    fig, axes = plt.subplots(len(rows), 1, figsize=(9.6, 0.62 * len(rows) + 1.0), sharex=False)
+    for ax, c, r in zip(axes, decode_cases, rows):
         n = len(c["input"])
         ax.barh([0], [n], color=GRID, height=0.6)
         for i in c["flipped_bits"]:
@@ -355,7 +355,8 @@ def exp_platform() -> dict:
         ax.set_xlim(0, n)
         ax.set_yticks([])
         ax.grid(False)
-        ax.text(-0.01, 0.5, "«%s»" % (r["text"] if len(r["text"]) <= 14 else r["text"][:12] + "…"),
+        ax.text(-0.01, 0.5, "«%s» · %s" % (r["text"] if len(r["text"]) <= 10 else r["text"][:9] + "…",
+                                          variant[r["kata_language"]]),
                 transform=ax.transAxes, ha="right", va="center", fontsize=8.5, color=INK)
         ax.text(1.01, 0.5, "%d із %d (%s %%)" % (r["flipped"], n, _n(r["percent"], 1)),
                 transform=ax.transAxes, ha="left", va="center", fontsize=8, color=INK_2)
