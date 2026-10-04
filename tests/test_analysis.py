@@ -171,3 +171,16 @@ def test_hamming74_crossover_is_three_minus_root_three_over_six() -> None:
     assert hamming74_bit_error(c) == pytest.approx(c, abs=1e-12)
     assert hamming74_bit_error(c - 0.01) < c - 0.01
     assert hamming74_bit_error(c + 0.01) > c + 0.01
+
+
+def test_hamming74_reduces_character_errors_on_whole_interval() -> None:
+    """
+    Поріг (3 − √3)/6 стосується лише частки хибних інформаційних бітів.
+    Частку хибних символів код (7,4) зменшує на всьому інтервалі (0; 0,5):
+    за невдалого декодування помилки скупчуються в одному блоці.
+    """
+    grid = [i / 1000 for i in range(1, 500)]
+    assert all(char_error_hamming74(p) < char_error_uncoded(p) for p in grid)
+    p = 0.25
+    assert hamming74_bit_error(p) > p                          # біти — гірше
+    assert char_error_hamming74(p) < char_error_uncoded(p)     # символи — краще
